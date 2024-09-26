@@ -1,0 +1,51 @@
+.pagination {
+    width: max-content;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    list-style: none;
+    font-size: 14px;
+
+    .pagination-link {
+        display: flex;
+        padding: 10px 15px;
+        justify-content: center;
+        color: #000;
+        text-decoration: none;
+        transition: color .1s ease-in-out, background-color .1s ease-in-out, border-color .1s ease-in-out;
+        border-radius: 4px;
+        cursor: pointer;
+
+        &:focus {
+            outline: 0;
+            // box-shadow: 0 0 0 .25rem rgba(13, 110, 253, .25);
+        }
+        &:hover {
+            background-color: rgba(0,0,0,0.1);
+            border-color: rgba(0,0,0,0.1);
+        }
+    }
+
+    .pagination-item {
+        font-family: 'Poppins';
+        &.active .pagination-link {
+            pointer-events: none;
+            background-color: var(--primary);
+            color: white;
+        }
+        &.disabled .pagination-link {
+            color: rgba(0, 0, 0, 0.3);
+            pointer-events: none;
+            background-color: transparent;
+        }
+        &:first-child .pagination-link {
+            // background-color: rgba(19,85,109,0.2);
+            color: var(--primary);
+        }
+        &:last-child .pagination-link {
+            // background-color: rgba(19,85,109,0.2);
+            color: var(--primary);
+        }
+    }
+}
