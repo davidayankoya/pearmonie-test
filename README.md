@@ -1,6 +1,6 @@
 # Provis CRM
 
-This is an easy-to-use CRM solution.
+Easy-to-use CRM solution.
 
 ## Available Scripts
 
