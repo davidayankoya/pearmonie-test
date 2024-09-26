@@ -2,7 +2,7 @@ import { Table, TableRow } from 'common/Table/Table'
 import { VStack } from '@chakra-ui/react';
 import { SortType } from 'types/general';
 import { UserResponse } from 'types/auth/user.type';
-import { BrandColor, TextColor } from 'constants/theme';
+import { TextColor } from 'constants/theme';
 import Tag from 'common/Tag/Tag';
 
 const tableFields = [
