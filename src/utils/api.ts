@@ -2,7 +2,7 @@ import { API_NETWORK_FAIL, API_URL } from 'constants/constants';
 import Notify from './notify';
 import openAxios from './axios';
 import { setNetworkFail } from 'store/authSlice';
-import { AxiosHeaders, AxiosRequestConfig, AxiosResponse } from 'axios';
+import { AxiosRequestConfig, AxiosResponse } from 'axios';
 import { AppStore } from 'store';
 import { formatPayload } from './utils';
 import ErrorToast from 'common/Error/ErrorToast';

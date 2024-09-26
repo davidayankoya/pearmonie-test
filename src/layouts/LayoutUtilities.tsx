@@ -1,5 +1,3 @@
-'use client'
-
 import React from 'react'
 import { createStandaloneToast } from '@chakra-ui/react'
 import { useAppSelector } from 'hooks/useApp'

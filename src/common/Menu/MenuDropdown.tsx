@@ -1,5 +1,3 @@
-'use client'
-
 import React, { MouseEventHandler, CSSProperties } from 'react'
 import { Menu, MenuButton, MenuList, MenuItem, HStack, Flex, MenuProps, MenuListProps } from '@chakra-ui/react'
 import { BrandColor, TextColor } from 'constants/theme'

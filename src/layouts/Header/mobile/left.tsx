@@ -1,5 +1,3 @@
-'use client'
-
 import React from 'react'
 import { Flex, IconButton } from '@chakra-ui/react'
 import { TiThMenu } from 'react-icons/ti'
@@ -9,7 +7,6 @@ import { BrandColor } from 'constants/theme'
 import SidebarLeft from '../../Sidebar/left/mobile'
 import { NavigationLink } from 'types/general'
 import { useScreenSize } from 'hooks/useScreen'
-// import Breadcrumb from 'common/Crumb/Breadcrumb'
 
 
 function HeaderLeft({ menu, bgColor, sidebarBg }: { menu: NavigationLink[]; bgColor?: string; sidebarBg?: string; }) {

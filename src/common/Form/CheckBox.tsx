@@ -1,5 +1,3 @@
-'use client'
-
 import React from 'react'
 import { BoxProps, Checkbox as ChakraCheckbox, CheckboxProps as ChakraCheckboxProps, FormControl, FormLabel, FormLabelProps, HStack } from '@chakra-ui/react'
 import { BrandColor, TextColor } from 'constants/theme'

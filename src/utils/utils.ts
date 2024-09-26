@@ -36,7 +36,7 @@ export const camelCase = (text: string = '', splitter: string = ' ') => {
     return String(text).split(splitter).map(e => e.charAt(0).toLowerCase() + String(text).slice(1)).join(splitter)
 }
 export function capCase(text: string = '', splitter: string = ' ') {
-    if (text === '' || text == null || text == 'null') {
+    if (text === '' || text === null || text === 'null') {
         return ''
     }
     let newStr = String(text).split(splitter)
@@ -119,14 +119,14 @@ export const dateSort = (arr = [], key = '', order: SortType) => {
 export function isObjectPropsEmpty(obj: { [k: string]: any } = {}) {
     const keys = Object.keys(obj)
     if (keys.length > 0) {
-        return keys.every(k => obj[k] == '' || !obj[k])
+        return keys.every(k => obj[k] === '' || !obj[k])
     }
     return true
 }
 
 export const xPropsValid = (obj: { [k: string]: any }, num: number) => {
     const keys = Object.keys(obj)
-    return keys.filter(k => obj[k] != '' && obj[k] != null && obj[k] != undefined).length >= num
+    return keys.filter(k => obj[k] !== '' && obj[k] != null && obj[k] !== undefined).length >= num
 }
 
 export function isObject(obj: {}) {
@@ -210,6 +210,7 @@ export function formatJson(json: string) {
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;");
   return json.replace(
+    // eslint-disable-next-line no-useless-escape
     /("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g,
     function (match) {
       var cls = "number";

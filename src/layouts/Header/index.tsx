@@ -1,8 +1,5 @@
-'use client'
-
 import { Box } from "@chakra-ui/react";
 import { NavigationLink } from "types/general";
-import DesktopHeader from "./desktop";
 import MobileHeader from "./mobile"
 
 const HeaderWrapper = ({ children }: { children: React.ReactNode }) => (

@@ -65,11 +65,11 @@ function Dashboard() {
         setFilter(prev => ({ ...prev, page: selected + 1 }))
     }
     
-    const handleSort = (key: string, order: SortType) => {
-        setFilter(prev => ({ ...prev, column_name: key, sort_type: prev.column_name === key ? order === SortType.asc ? SortType.desc : SortType.asc : SortType.desc, page: 1 }))
-    }
+    // const handleSort = (key: string, order: SortType) => {
+    //     setFilter(prev => ({ ...prev, column_name: key, sort_type: prev.column_name === key ? order === SortType.asc ? SortType.desc : SortType.asc : SortType.desc, page: 1 }))
+    // }
 
-    const { data: statsResponse, isLoading: statsLoading } = useGetUsersQuery({ query: formatFilter({ ...initFilter }) })
+    const { data: statsResponse } = useGetUsersQuery({ query: formatFilter({ ...initFilter }) })
     const { data: usersResponse, isLoading: usersLoading } = useGetUsersQuery({ query: formatFilter({ ...filter, search: value }) })
     
 

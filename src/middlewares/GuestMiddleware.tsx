@@ -1,5 +1,3 @@
-'use client'
-
 import React, { ReactElement, useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "hooks/useApp";
 import { useQueryParams } from "hooks/useNavigate";

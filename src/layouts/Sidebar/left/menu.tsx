@@ -1,5 +1,3 @@
-'use client'
-
 import React, { useState, useEffect } from 'react'
 import { Text } from 'common/Text/Text'
 import { BrandColor, TextColor } from 'constants/theme'
@@ -15,7 +13,6 @@ import { Link } from 'common/Link/Link'
 import { useLocation } from 'react-router-dom'
 import Button from 'common/Button/Button'
 import Avatar from 'common/Avatar/Avatar'
-import ProfilePic from 'assets/img/profile-pic.png'
 import { PiCaretDown } from 'react-icons/pi'
 
 
@@ -174,14 +171,6 @@ function Menu({
     const { user } = useAppSelector(s => s.auth)
     const { pathname } = useLocation()
 
-    // const { data: permissions } = useViewAdminRolePermissionsQuery({ query: { id: user?.role_id! } }, {
-    //     enabled: !!user?.role_id,
-    //     refetchOnWindowFocus: false,
-    //     refetchOnMount: false,
-    //     refetchOnReconnect: true,
-    //     staleTime: 6 * 60 * 60 * 1000,
-    // })
-
     const [state, setState] = useState({
         open: null
     } as { open: number | null })
@@ -190,17 +179,6 @@ function Menu({
         setState(prev => ({ ...prev, open: prev.open === index ? null : index }))
     }
 
-    // const links = useMemo(() => {
-    //     const newLinks = navLinks.map(link => {
-    //         const items = (link?.subItems ?? []).filter(item => {
-    //             const found = permissions?.find(perm => String(perm.module_id) === String(item.module))
-    //             return found ? item?.permission ? (found[item?.permission] === 1) : found.read === 1 : false
-    //         })
-    //         return ({ ...link, subItems: items?.length > 0 ? items : [] })
-    //     }).filter(x => (x.subItems.length > 0) || ['/help', '/help/setup'].includes(x.to ?? ''))
-
-    //     return helpPage ? newLinks : String(user?.role_id) === RoleIds.Super_Admin ? navLinks : newLinks
-    // }, [user?.role_id, permissions, navLinks, helpPage])
     const links = navLinks
 
     useEffect(() => {

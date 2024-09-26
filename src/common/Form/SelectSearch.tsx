@@ -1,5 +1,3 @@
-'use client'
-
 import React, { useEffect, useMemo, useRef, useState } from 'react'
 import { FormikValues } from "formik";
 import { BoxProps, Input as ChakraInput, FormControl, FormLabel, HStack, InputGroup, InputLeftElement, InputRightElement, useDisclosure } from '@chakra-ui/react';

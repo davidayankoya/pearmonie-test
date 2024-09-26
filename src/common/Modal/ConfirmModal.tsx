@@ -1,5 +1,3 @@
-'use client'
-
 import { Modal, ModalHeader, ModalBody, ModalFooter, ModalOverlay, ModalContent, HStack } from '@chakra-ui/react'
 import Button from 'common/Button/Button'
 import { BrandColor, TextColor } from 'constants/theme'

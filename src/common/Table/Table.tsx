@@ -1,5 +1,3 @@
-'use client'
-
 import React, { MouseEventHandler } from 'react'
 import { TableContainer, Table as ChakraTable, Tbody, Td, Th, Thead, Tr, HStack, TableProps as ChakraTableProps, BoxProps, StackProps, TextProps, Flex, Box, TableHeadProps, TableBodyProps } from '@chakra-ui/react'
 import EmptyListHero from 'common/Hero/EmptyListHero'

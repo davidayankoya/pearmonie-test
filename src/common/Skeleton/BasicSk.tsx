@@ -1,5 +1,3 @@
-// 'use client'
-
 import { BoxProps, Skeleton, Stack } from '@chakra-ui/react'
 import React, { ReactElement } from 'react'
 

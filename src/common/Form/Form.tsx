@@ -1,5 +1,3 @@
-'use client'
-
 import { StackProps, VStack } from '@chakra-ui/react';
 import React, { CSSProperties, FormEvent, FormEventHandler }  from 'react'
 

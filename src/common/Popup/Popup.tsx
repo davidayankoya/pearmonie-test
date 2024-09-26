@@ -1,5 +1,3 @@
-'use client'
-
 import React from 'react'
 import { BrandColor } from "constants/theme";
 import { Popover, PopoverProps, PopoverTrigger, PopoverContent, PopoverContentProps, PopoverArrow, PopoverBody, Portal, PopoverBodyProps, PopoverAnchor } from "@chakra-ui/react"

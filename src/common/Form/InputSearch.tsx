@@ -1,10 +1,6 @@
-'use client'
-
 import React, { useEffect } from 'react'
 import { Input } from 'common/Form'
 import Popup from 'common/Popup/Popup'
-import BasicSk from 'common/Skeleton/BasicSk'
-import { Text } from 'common/Text/Text'
 import { BrandColor } from 'constants/theme'
 import { BoxProps, Center, VStack, useDisclosure } from '@chakra-ui/react'
 import { FormikValues } from 'formik'

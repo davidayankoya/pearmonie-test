@@ -1,5 +1,3 @@
-'use client'
-
 import React, { ReactElement, useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "hooks/useApp";
 import { useNavigate, useLocation, Navigate } from 'react-router-dom'
@@ -28,12 +26,12 @@ export default function AuthMiddleware({ children, redirectTo, params }: MiddleW
         //eslint-disable-next-line
     }, [])
 
-    // useEffect(() => {
-    //     if (!isAuthenticated && !isLoading && checkedAuth) {
-    //         push(`/login?redirect=${pathname as string}${newParams.length > 1 ? newParams : ''}`)
-    //     }
-    //     //eslint-disable-next-line
-    // }, [isAuthenticated, checkedAuth])
+    useEffect(() => {
+        if (!isAuthenticated && !isLoading && checkedAuth) {
+            push(`/login?redirect=${pathname as string}${newParams.length > 1 ? newParams : ''}`)
+        }
+        //eslint-disable-next-line
+    }, [isAuthenticated, checkedAuth])
 
     return isAuthenticated ? children : <Navigate to={redirectTo ?? '#'} />;
 }

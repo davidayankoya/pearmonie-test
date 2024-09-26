@@ -1,5 +1,3 @@
-'use client'
-
 import { InputProps as ChakraInputProps, FormControl, FormLabel } from '@chakra-ui/react'
 import { TextColor } from 'constants/theme'
 import React from 'react'

@@ -1,9 +1,5 @@
-'use client'
-
 import React from 'react';
 import { Stack, StackProps } from '@chakra-ui/react';
-import { useAppSelector } from 'hooks/useApp';
-import { useScreenSize } from 'hooks/useScreen';
 import { BrandColor } from 'constants/theme';
 
 
@@ -15,9 +11,6 @@ interface MainProps extends StackProps {
 }
 
 function Main({ children, className, fullPage, bgColor, ...props }: MainProps) {
-    const { isLeftToggled } = useAppSelector(s => s.ui)
-    const { isMobile } = useScreenSize()
-
     return (
         <Stack
             as='main'

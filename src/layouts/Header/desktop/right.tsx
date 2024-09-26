@@ -1,35 +1,34 @@
-'use client'
-
 import React from 'react';
-import { HStack, useDisclosure } from '@chakra-ui/react';
+import { HStack } from '@chakra-ui/react';
 import Button from 'common/Button/Button';
-import Avatar from 'common/Avatar/Avatar';
-import { useAppDispatch, useAppSelector } from 'hooks/useApp';
-import { BrandColor, TextColor } from 'constants/theme';
+// import Avatar from 'common/Avatar/Avatar';
+import { useAppSelector } from 'hooks/useApp';
+// import { BrandColor, TextColor } from 'constants/theme';
 import { UserModel } from 'types/auth/auth.type';
-import { Text } from 'common/Text/Text';
-import { PiCaretDownBold } from "react-icons/pi";
-import { MdOutlineLogout } from "react-icons/md";
-import { logoutReq } from 'store/authSlice';
+// import { Text } from 'common/Text/Text';
+// import { PiCaretDownBold } from "react-icons/pi";
+// import { MdOutlineLogout } from "react-icons/md";
+// import { logoutReq } from 'store/authSlice';
 import { Link } from 'common/Link/Link';
-import MenuDropdown from 'common/Menu/MenuDropdown';
-import { useLocation, useNavigate } from 'react-router-dom';
+// import MenuDropdown from 'common/Menu/MenuDropdown';
+// import { useLocation, useNavigate } from 'react-router-dom';
 
 
 export const Authenticated = ({
     user,
 }: { user: UserModel | null; }) => {
-    const dispatch = useAppDispatch()
-    const push = useNavigate()
-    const { pathname } = useLocation()
-    const { isOpen, onOpen, onClose } = useDisclosure()
+    // const dispatch = useAppDispatch()
+    // const push = useNavigate()
+    // const { pathname } = useLocation()
+    // const { isOpen, onOpen, onClose } = useDisclosure()
 
-    const logout = () => {
-        dispatch(logoutReq())
-    }
-    const menuOptions = [
-        { name: 'Log Out', icon: <MdOutlineLogout size={20} style={{ transform: 'translateX(2px)'}} />, onUse: logout },
-    ]
+    // const logout = () => {
+    //     dispatch(logoutReq())
+    // }
+
+    // const menuOptions = [
+    //     { name: 'Log Out', icon: <MdOutlineLogout size={20} style={{ transform: 'translateX(2px)'}} />, onUse: logout },
+    // ]
 
     return (
         <HStack w={['full', 'full', 'max-content']} alignItems='center' justify='end' spacing={4}>

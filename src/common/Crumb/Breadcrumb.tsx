@@ -1,7 +1,4 @@
-'use client'
-
 import { BrandColor } from 'constants/theme'
-import { capCase } from 'utils/utils'
 import { BreadcrumbItem, Flex, FlexProps, Breadcrumb as ChakraBreadcrumb } from '@chakra-ui/react'
 import React, { useMemo } from 'react'
 import { BiChevronRight } from 'react-icons/bi'
@@ -10,7 +7,6 @@ import { useScreenSize } from 'hooks/useScreen'
 import { minNavLinks } from 'layouts/AuthLayout/menu'
 import { Link } from 'common/Link/Link'
 import { useLocation } from 'react-router-dom'
-// import { useTranslations } from 'next-intl'
 
 
 interface BreadcrumbProps {

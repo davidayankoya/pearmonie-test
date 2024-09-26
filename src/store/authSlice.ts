@@ -6,13 +6,12 @@ import { toggleLoading } from "./uiSlice";
 import { AuthCreds, UserModel } from "types/auth/auth.type";
 import { AuthService } from "services/auth/auth.service";
 
-const mockUser: UserModel = {
-    id: 1,
-    firstName: 'Evano',
-    lastName: 'Pius',
-    email: 'piusevanotheboy@gmail.com',
-
-}
+// const mockUser: UserModel = {
+//     id: 1,
+//     firstName: 'Evano',
+//     lastName: 'Pius',
+//     email: 'piusevanotheboy@gmail.com',
+// }
 
 interface AuthState {
     isAuthenticated: boolean,
@@ -168,7 +167,7 @@ export const logoutReq = createAsyncThunk(
     async (params: undefined, thunkAPI) => {
         thunkAPI.dispatch(toggleLoading(true))
         try {
-            const response = await AuthService.logout()
+            // const response = await AuthService.logout()
             thunkAPI.dispatch(authSlice.actions.authLogout())
             thunkAPI.dispatch(toggleLoading(false))
             Notify.success(`Logged Out`)

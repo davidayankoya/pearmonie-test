@@ -1,13 +1,9 @@
-'use client'
-
 import React from 'react'
-import { Flex, Icon, IconButton } from '@chakra-ui/react'
+import { Flex } from '@chakra-ui/react'
 import { TiThMenu } from 'react-icons/ti'
 import { useAppDispatch, useAppSelector } from 'hooks/useApp'
 import { toggleLeftSide } from 'store/uiSlice'
-import { BrandColor } from 'constants/theme'
 import Breadcrumb from 'common/Crumb/Breadcrumb'
-import { PiCaretCircleLeftFill } from "react-icons/pi";
 
 
 function HeaderLeft({ showBreadcrumb = false }: { showBreadcrumb?: boolean; }) {

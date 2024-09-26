@@ -1,4 +1,3 @@
-// 'use client'
 import React from 'react'
 import { Box, BoxProps, Tooltip as ChakraTooltip, TooltipProps as ChakraTooltipProps } from '@chakra-ui/react'
 
