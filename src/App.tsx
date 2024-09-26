@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import { Provider } from 'react-redux';
 import { ChakraProvider, useColorMode } from '@chakra-ui/react'
 import { MutationCache, QueryCache, QueryClient, QueryClientProvider } from '@tanstack/react-query'
