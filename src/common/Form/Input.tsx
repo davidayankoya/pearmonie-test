@@ -139,6 +139,7 @@ export const Input = React.memo(forwardRef(function Input ({
         return type === 'money' ? handleMoneyChange(ev) :
             type === 'percent' ? handlePercentChange(ev) :
             type === 'number' ? handleNumberChange(ev) : formikChange(ev)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [type, value])
 
     const formError = error ? error : getNestedValue(formik?.errors, name) ?? ''
