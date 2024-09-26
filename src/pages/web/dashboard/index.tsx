@@ -6,7 +6,7 @@ import { useFormik } from 'formik';
 import { useAppSelector } from 'hooks/useApp';
 import PageMain from 'layouts/PageMain';
 import React, { useState } from 'react'
-import { LuSearch } from "react-icons/lu";
+import { LuMonitor, LuSearch } from "react-icons/lu";
 import StatBox from './components/StatBox';
 import { LuUsers2 } from "react-icons/lu";
 import { TbUserCheck } from "react-icons/tb";
@@ -64,10 +64,6 @@ function Dashboard() {
     const handlePageChange = ({ selected }: { selected: number }) => {
         setFilter(prev => ({ ...prev, page: selected + 1 }))
     }
-    
-    // const handleSort = (key: string, order: SortType) => {
-    //     setFilter(prev => ({ ...prev, column_name: key, sort_type: prev.column_name === key ? order === SortType.asc ? SortType.desc : SortType.asc : SortType.desc, page: 1 }))
-    // }
 
     const { data: statsResponse } = useGetUsersQuery({ query: formatFilter({ ...initFilter }) })
     const { data: usersResponse, isLoading: usersLoading } = useGetUsersQuery({ query: formatFilter({ ...filter, search: value }) })
@@ -91,7 +87,7 @@ function Dashboard() {
 
             <SimpleGrid columns={[1, 1, 2, 3]} gap={['3rem', '3rem', '3rem',  '0']} borderRadius='2rem' px={['2.5rem', '2.5rem', '4rem']} py='2.5rem' bgColor={BrandColor.white}>
                 <StatBox
-                    icon={<Icon as={LuUsers2} color={BrandColor.green} fontSize={40} />}
+                    icon={<Icon as={LuUsers2} color={BrandColor.green} fontSize={50} />}
                     title='Total Users'
                     count={statsResponse?.total!}
                     type='variation'
@@ -100,7 +96,7 @@ function Dashboard() {
                     loading={usersLoading}
                 />
                 <StatBox
-                    icon={<Icon as={TbUserCheck} color={BrandColor.green} fontSize={40} />}
+                    icon={<Icon as={TbUserCheck} color={BrandColor.green} fontSize={50} />}
                     title='Members'
                     count={statsResponse?.total!}
                     type='variation'
@@ -109,7 +105,7 @@ function Dashboard() {
                     loading={usersLoading}
                 />
                 <StatBox
-                    icon={<Icon as={TbUserCheck} color={BrandColor.green} fontSize={40} />}
+                    icon={<Icon as={LuMonitor} color={BrandColor.green} fontSize={50} />}
                     title='Active Now'
                     count={statsResponse?.total!}
                     type='profiles'

@@ -1,7 +1,7 @@
 import { Box, Skeleton } from '@chakra-ui/react'
 import { BrandColor } from 'constants/theme'
 import React from 'react'
-const h = '4.8rem'
+const h = '4.5rem'
 
 
 function TableSk() {

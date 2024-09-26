@@ -22,13 +22,13 @@ function StatBox({ icon, iconBg, title, count, type, variation, frequency, loadi
     const { isMobile } = useScreenSize()
     return (
         <HStack w='full' spacing='1.5rem' justify='start' align='center'>
-            <Center p='1rem' bg={iconBg ?? BrandColor.greenGrade} borderRadius='full'>
+            <Center p='1.5rem' bg={iconBg ?? BrandColor.greenGrade} borderRadius='full'>
                 {icon}
             </Center>
 
             <VStack w='max' align='start'>
                 <Text size='sm' color={TextColor.grey}>{title}</Text>
-                <Text size='2xl' weight={600} color={TextColor.black}>{loading ? '-' : count}</Text>
+                <Text size='3xl' weight={600} color={TextColor.black}>{loading ? '-' : count}</Text>
                 {(type === 'variation' && variation) ? (
                     <HStack>
                         {variation >= 0 ? <Icon as={FaArrowUp} color={BrandColor.green} /> : <Icon as={FaArrowDown} color={BrandColor.crimson} />}
