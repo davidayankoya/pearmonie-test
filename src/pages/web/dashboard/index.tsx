@@ -17,6 +17,7 @@ import { useGetUsersQuery } from 'services/users/users.hook';
 import TableCount from 'common/Table/TableCount';
 import { GetUsersResponse } from 'types/auth/user.type';
 import { useDebounce } from 'use-debounce';
+import { RxCross2 } from 'react-icons/rx';
 const per_page = 8
 const initFilter = {
     page: 1,
@@ -127,6 +128,7 @@ function Dashboard() {
                             formik={formik}
                             value={formik.values.userSearch}
                             leftIcon={<Icon as={LuSearch} color={BrandColor.dark} />}
+                            rightIcon={!!formik.values.userSearch ? <Icon as={RxCross2} color={BrandColor.dark} onClick={() => formik.setFieldValue('userSearch', '')} /> : undefined}
                             w={['full', 'full', '30%']}
                             bgColor={BrandColor.offWhite}
                             sx={{ border: 'none' }}

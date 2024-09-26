@@ -53,7 +53,6 @@ function LoginForm() {
                 label='Email Id/Username'
                 placeholder="Email"
                 name="email"
-                // type="email"
                 formik={formik}
                 value={formik.values.email}
             />
@@ -70,7 +69,7 @@ function LoginForm() {
                 alignSelf='end'
                 fontSize='sm'
                 mb='2rem'
-                color={BrandColor.primary}
+                color='#1E2772'
             >
                 Forgot Password?
             </Link>
@@ -85,7 +84,7 @@ function LoginForm() {
                     bg={BrandColor.primary}
                     color={TextColor.white}
                 />
-                <Divider text='OR' textProps={{ color: BrandColor.border}} />
+                <Divider text='OR' textProps={{ color: '#C2C2C2' }} />
                 <Button
                     text="Signup now"
                     w='full'

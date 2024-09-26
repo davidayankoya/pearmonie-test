@@ -49,7 +49,7 @@ function UsersTable({ data = [], loading, onSearch, sortBy, sortOrder, onSort }:
                             { name: 'Phone Number', value: reg?.phone },
                             { name: 'Email', value: reg?.email },
                             { name: 'Country', value: reg?.address?.country },
-                            { name: 'Status', value: <Tag label={'Active'} colorScheme={'whatsapp'} size='lg' borderColor={BrandColor.green} borderWidth='1px' /> },
+                            { name: 'Status', value: <Tag label={'Active'} color='#008767' bgColor='rgba(22,192,152,0.38)' size='lg' borderColor='#00B087' borderWidth='1px' fontWeight={500} /> },
                         ]}
                         rowValue='value'
                     />

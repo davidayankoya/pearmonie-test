@@ -173,7 +173,7 @@ export function TableRow({
             bgColor={colored ? index % 2 === 0 ? BrandColor.border : '' : ''}
             cursor={onClick ? 'pointer' : ''}
             _hover={{ bgColor: onClick ? BrandColor.active50 : undefined }}
-            borderBottom={`1px solid #edf2f7`}
+            borderBottom={`1px solid '#C2C2C2'`}
         >
             {numbered &&
                 <Td py={5}>
